@@ -89,6 +89,4 @@ if [[ ! -d $HOME/.config/fish ]]; then
   ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 fi
 
-pip install neovim
-
 echo "Done."

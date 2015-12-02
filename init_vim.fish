@@ -1,12 +1,12 @@
 # Install NeoVIM
-brew install neovim/neovim/neovim
+brew install vim --with-lua --with-luajit --with-python3 --override-system-vi
 
 # Install vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Link
-ln $HOME/.files/nvimrc $HOME/.vimrc
+ln $HOME/.files/vimrc $HOME/.vimrc
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
 

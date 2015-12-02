@@ -15,8 +15,8 @@ set -gx PATH $PATH $HOME/.rbenv/shims
 
 # Alias for editors
 
-alias vim="nvim"
-alias v="nvim"
+#alias vim="nvim"
+alias v="vim"
 alias a="atom"
 alias s="subl"
 
