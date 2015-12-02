@@ -12,6 +12,7 @@ Plug 'benmills/vimux'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
+Plug 'Valloric/YouCompleteMe'
 
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'

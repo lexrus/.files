@@ -14,7 +14,7 @@ vim +PlugInstall +qall
 
 # Install YCM
 cd $HOME/.vim/bundle/YouCompleteMe
-./install.sh --gocode-completer --clang-completer
+sh install.sh --gocode-completer --clang-completer
 cd
 
 
