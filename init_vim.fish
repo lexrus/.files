@@ -2,7 +2,7 @@
 brew install vim --with-lua --with-luajit --with-python3 --override-system-vi
 
 # Install vim-plug
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Link
