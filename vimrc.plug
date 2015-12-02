@@ -1,0 +1,23 @@
+
+Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json'
+Plug 'scrooloose/syntastic'
+Plug 'pearofducks/ansible-vim'
+Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'benmills/vimux'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+
+" Group dependencies, vim-snippets depends on ultisnips
+"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+
+
