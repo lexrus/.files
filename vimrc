@@ -1,6 +1,9 @@
 set nocompatible
 filetype off
 
+syntax on
+slient! colorscheme dracula
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
