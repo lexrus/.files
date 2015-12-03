@@ -16,7 +16,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
-Plug 'zenorocha/dracula-theme', { 'rtp': 'vim/' }
+Plug 'terryma/vim-multiple-cursors'
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force

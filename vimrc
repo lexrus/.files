@@ -2,10 +2,10 @@ set nocompatible
 filetype off
 
 syntax on
-slient! colorscheme dracula
+colorscheme dracula
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/bundle')
 
 if filereadable(expand("~/.files/vimrc.plug"))
   source ~/.files/vimrc.plug
@@ -77,7 +77,7 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " Nerd Tree
-map <C-n> :NERDTreeToggle<CR>
+map <C-l> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
