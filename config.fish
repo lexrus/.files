@@ -10,6 +10,8 @@ end
 # Exports
 
 set -gx PATH $PATH /usr/local/sbin
+set -x GOPATH $HOME/go
+set -x GO15VENDOREXPERIMENT 1
 command --search rbenv >/dev/null; and begin
   set -gx PATH $PATH $HOME/.rbenv/shims
   . (rbenv init -|psub)
