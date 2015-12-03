@@ -13,8 +13,9 @@ ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
 vim +PlugInstall +qall
 
 # Install YCM
-cd $HOME/.vim/bundle/YouCompleteMe
-sh install.sh --gocode-completer --clang-completer
+cd $HOME/.vim/plugged/YouCompleteMe
+git submodule update --init --recursive
+python3 install.py --gocode-completer --clang-completer
 cd
 
 
