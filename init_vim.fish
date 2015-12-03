@@ -1,5 +1,5 @@
 # Install NeoVIM
-brew install vim --with-lua --with-luajit --with-python3 --override-system-vi
+brew install vim --with-lua --with-luajit --override-system-vi
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

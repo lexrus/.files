@@ -1,4 +1,5 @@
 
+Plug 'tpope/vim-sensible'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'scrooloose/syntastic'
@@ -12,7 +13,15 @@ Plug 'benmills/vimux'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
-Plug 'Valloric/YouCompleteMe'
+Plug 'ervandew/supertab'
+
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --gocode-completer --clang-completer
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
