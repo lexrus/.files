@@ -10,8 +10,10 @@ end
 # Exports
 
 set -gx PATH $PATH /usr/local/sbin
-set -gx PATH $PATH $HOME/.rbenv/bin
-set -gx PATH $PATH $HOME/.rbenv/shims
+command --search rbenv >/dev/null; and begin
+  set -gx PATH $PATH $HOME/.rbenv/shims
+  . (rbenv init -|psub)
+end
 
 # Alias for editors
 
