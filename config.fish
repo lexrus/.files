@@ -9,7 +9,8 @@ end
 
 # Exports
 
-set -gx PATH $PATH /usr/local/sbin
+set -x PATH $PATH /usr/local/sbin
+set -x PATH $PATH $HOME/go/bin
 set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 command --search rbenv >/dev/null; and begin
