@@ -123,3 +123,18 @@ endfunction
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_type_swift = {
+  \ 'ctagstype': 'swift',
+  \ 'kinds' : [
+    \ 'v:variable',
+    \ 's:struct',
+    \ 't:typealias',
+    \ 'n:enum',
+    \ 'f:function',
+    \ 'c:class',
+    \ 'e:extension',
+    \ 'p:protocol'
+  \ ],
+  \ 'sort' : 0
+\ }
+
