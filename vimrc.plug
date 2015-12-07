@@ -17,6 +17,8 @@ Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'keith/swift.vim'
+Plug 'keith/sourcekittendaemon.vim'
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force

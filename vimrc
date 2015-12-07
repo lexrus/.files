@@ -34,6 +34,10 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
+" 80 column layout concerns
+highlight OverLength ctermbg=89 ctermfg=197 guibg=#331111
+match OverLength /\%81v.\+/
+
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
@@ -82,6 +86,7 @@ map <C-l> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YoutCompleteMe
+highlight Pmenu ctermfg=119 ctermbg=0 guifg=#87ff5f guibg=#000000
 let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_key_list_select_completion = ['<c-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-k>', '<Up>']
@@ -115,3 +120,6 @@ function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
   endif
 endfunction
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
