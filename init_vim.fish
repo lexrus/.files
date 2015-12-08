@@ -1,4 +1,5 @@
 # Install VIM
+brew install ctags
 brew install vim --with-lua --with-luajit --override-system-vi
 
 # Install vim-plug
@@ -6,7 +7,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Link
-ln $HOME/.files/vimrc $HOME/.vimrc
+ln $HOME/.files/.vimrc $HOME/.vimrc
+ln $HOME/.files/.vimplug $HOME/.vimplug
+ln $HOME/.files/.ctags $HOME/.ctags
 
 vim +PlugInstall +qall
 
