@@ -3,6 +3,7 @@
 --regex-swift=/enum[ \t]+([^\{\}]+).*$/\1/n,enum,enums/ 
 --regex-swift=/typealias[ \t]+([^:=]+).*$/\1/t,typealias,typealiases/ 
 --regex-swift=/protocol[ \t]+([^:\{]+).*$/\1/p,protocol,protocols/
+--regex-swift=/protocol[ \t]+extension[ \t]*([^:\{]+).*$/\1/p,protocol,protocols/
 --regex-swift=/struct[ \t]+([^:\{]+).*$/\1/s,struct,structs/ 
 --regex-swift=/class[ \t]+([^:\{]+).*$/\1/c,class,classes/ 
 --regex-swift=/func[ \t]+([^\(\)]+)\([^\(\)]*\)/\1/f,function,functions/ 

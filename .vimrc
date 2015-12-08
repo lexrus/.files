@@ -1,9 +1,6 @@
 set nocompatible
 filetype off
 
-syntax on
-colorscheme dracula
-
 " Plugins
 call plug#begin('~/.vim/bundle')
 
@@ -12,6 +9,9 @@ if filereadable(expand("~/.vimplug"))
 endif
 
 call plug#end()
+
+syntax on
+colorscheme monokai
 
 set backupcopy=yes                                           " see :help crontab
 set clipboard=unnamed                                        " yank and paste with the system clipboard
@@ -48,7 +48,7 @@ endif
 autocmd VimResized * :wincmd =
 
 " Podfile is Ruby
-autocmd BufRead,BufNewFile Podfile set filetype=ruby
+autocmd BufRead,BufNewFile Podfile,*.podspec set filetype=ruby
 
 " Markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown

@@ -19,6 +19,8 @@ Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'keith/swift.vim'
 Plug 'keith/sourcekittendaemon.vim'
+Plug 'sickill/vim-monokai'
+Plug 'cfdrake/vim-carthage'
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
