@@ -4,8 +4,8 @@ filetype off
 " Plugins
 call plug#begin('~/.vim/bundle')
 
-if filereadable(expand("~/.vimplug"))
-  source ~/.vimplug
+if filereadable(expand("~/.vimrc.plug"))
+  source ~/.vimrc.plug
 endif
 
 call plug#end()

@@ -8,7 +8,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # Link
 ln $HOME/.files/.vimrc $HOME/.vimrc
-ln $HOME/.files/.vimplug $HOME/.vimplug
+ln $HOME/.files/.vimrc.plug $HOME/.vimrc.plug
 ln $HOME/.files/.ctags $HOME/.ctags
 
 vim +PlugInstall +qall
