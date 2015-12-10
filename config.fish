@@ -11,6 +11,7 @@ end
 
 set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH $HOME/go/bin
+set -x PATH $PATH /Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin
 set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 command --search rbenv >/dev/null; and begin
@@ -24,6 +25,10 @@ end
 alias v="vim"
 alias a="atom"
 alias s="subl"
+
+# Proxy
+alias pon="set -Ux http_proxy http://127.0.0.1:7777;set -Ux https_proxy http://127.0.0.1:7777"
+alias poff="set -e http_proxy;set -e https_proxy"
 
 # File size
 alias fs="stat -f '%z bytes'"
