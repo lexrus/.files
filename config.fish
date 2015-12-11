@@ -95,3 +95,7 @@ end
 function dlaudio
     youtube-dl -f bestaudio --extract-audio --audio-format mp3 $argv
 end
+
+function gi
+    curl -L -s https://www.gitignore.io/api/$argv
+end
