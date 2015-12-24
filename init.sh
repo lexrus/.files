@@ -90,4 +90,8 @@ if [[ ! -d $HOME/.config/fish ]]; then
   ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 fi
 
+if [[ ! -h $HOME/.lldbinit ]]; then
+  ln -s $HOME/.files/.lldbinit $HOME/.lldbinit
+fi
+
 echo "Done."
