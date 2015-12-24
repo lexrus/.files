@@ -28,6 +28,7 @@ function brew_install_recipes() {
 # Homebrew recipes
 recipes=(
   axel
+  chisel
   coreutils
   ctags
   curl
