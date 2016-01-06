@@ -26,6 +26,7 @@ end
 alias v="vim"
 alias a="atom"
 alias s="subl"
+alias c="ccat"
 
 # Proxy
 alias pon="set -Ux http_proxy http://127.0.0.1:7777;set -Ux https_proxy http://127.0.0.1:7777"
