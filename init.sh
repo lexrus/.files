@@ -37,6 +37,7 @@ recipes=(
   fish
   git
   git-extras
+  gotags
   htop-osx
   hub
   imagemagick

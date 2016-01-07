@@ -19,22 +19,13 @@ Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'keith/swift.vim'
 Plug 'keith/sourcekittendaemon.vim'
-Plug 'sickill/vim-monokai'
+Plug 'tomasr/molokai'
 Plug 'cfdrake/vim-carthage'
-
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.py --gocode-completer --clang-completer
-  endif
-endfunction
-
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-
-" Group dependencies, vim-snippets depends on ultisnips
+Plug 'vim-ruby/vim-ruby'
+Plug 'Shougo/neocomplete.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'gregsexton/gitv'
+Plug 'osyo-manga/vim-monster'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-
 
