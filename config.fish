@@ -15,6 +15,11 @@ set -x PATH /Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin $PATH
 set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
+if contains "Darwin" (uname)
+  set -x EDITOR subl
+else
+  set -x EDITOR vim
+end
 command --search rbenv >/dev/null; and begin
   set -gx PATH $PATH $HOME/.rbenv/shims
   . (rbenv init -|psub)
