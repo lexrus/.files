@@ -38,6 +38,7 @@ recipes=(
   git
   git-extras
   gotags
+  graphivz
   htop-osx
   hub
   imagemagick
