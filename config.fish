@@ -34,7 +34,7 @@ alias s="subl"
 alias c="ccat"
 
 # Proxy
-alias pon="set -Ux http_proxy http://127.0.0.1:7777;set -Ux https_proxy http://127.0.0.1:7777"
+alias pon="set -Ux http_proxy http://127.0.0.1:6666;set -Ux https_proxy http://127.0.0.1:6666"
 alias poff="set -e http_proxy;set -e https_proxy"
 
 # File size
@@ -106,3 +106,4 @@ end
 function gi
     curl -L -s https://www.gitignore.io/api/$argv
 end
+
