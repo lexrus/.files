@@ -88,7 +88,7 @@ if [[ "$SHELL" != "/usr/local/bin/fish" ]]; then
 fi
 
 if [[ ! -d $HOME/.config/fish ]]; then
-  mkdir $HOME/.config/fish
+  mkdir -p $HOME/.config/fish
   ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 fi
 

@@ -27,7 +27,6 @@ end
 
 # Alias for editors
 
-#alias vim="nvim"
 alias v="vim"
 alias a="atom"
 alias s="subl"
@@ -79,8 +78,7 @@ end
 
 function updateall
   brew update --all ;and brew upgrade --all
-  brew reinstall --HEAD neovim
-  vim +BundleUpdate
+  vim +PlugUpdate
 end
 
 function upgrade
@@ -96,7 +94,7 @@ function www
 end
 
 function vimu
-  vim +BundleUpdate
+  vim +PlugUpdate
 end
 
 function dlaudio
