@@ -41,7 +41,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-map <leader>ss :setlocl spell!<CR>
+map <leader>ss :setlocal spell!<CR>
 
 " 80 column layout concerns
 highlight OverLength ctermbg=53 ctermfg=197 guibg=#5f005f
@@ -81,12 +81,15 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-"let g:airline_left_sep = ''
+let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
+
+" ZenMode
+nnoremap <silent> <leader>z :Goyo<cr>
 
 " Nerd Tree
 map <leader>nn :NERDTreeToggle<CR>
@@ -224,4 +227,6 @@ let g:tagbar_type_swift = {
   \ ],
   \ 'sort' : 0
 \ }
+
+
 
