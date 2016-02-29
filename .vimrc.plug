@@ -28,6 +28,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'gregsexton/gitv'
 Plug 'junegunn/goyo.vim'
 Plug 'amix/vim-zenroom2'
+Plug 'dag/vim-fish'
 Plug 'osyo-manga/vim-monster'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
