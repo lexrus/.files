@@ -21,7 +21,12 @@ command --search rbenv >/dev/null; and begin
   . (rbenv init -|psub)
 end
 
-# Alias for editors
+# Alias
+
+alias g="git"
+alias wip="git commit -a -m WIP"
+alias squish="git status -s;git commit -a --amend -C HEAD"
+alias ad="arc diff"
 
 alias v="vim"
 alias a="atom"

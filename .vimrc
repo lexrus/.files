@@ -56,8 +56,9 @@ endif
 " Automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
-" Podfile is Ruby
+" File types
 autocmd BufRead,BufNewFile Podfile,*.podspec set filetype=ruby
+autocmd BufRead,BufNewFile .arc* set filetype=json
 
 " Markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
