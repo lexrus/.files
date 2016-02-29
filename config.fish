@@ -44,9 +44,8 @@ alias df="df -h"
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
-# Activate fuzzy mode for Xcode 7. See https://twitter.com/hamzasood/status/621739073108111360
-alias xcfuzzy="defaults write com.apple.dt.Xcode IDECodeCompletionFuzzyMode -int 3"
-alias xcfuzzyoff="defaults delete com.apple.dt.Xcode IDECodeCompletionFuzzyMode"
+# Delete Apple System Logs
+alias dasl="sudo -rf /private/var/log/asl/*.asl"
 
 # Delete DerivedData
 alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
