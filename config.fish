@@ -34,16 +34,12 @@ alias s="subl"
 alias c="ccat"
 
 # Proxy
-alias pon="set -Ux http_proxy http://127.0.0.1:6666;set -Ux https_proxy http://127.0.0.1:6666"
+alias pon="set -x http_proxy http://127.0.0.1:7777;set -x https_proxy http://127.0.0.1:7777"
 alias poff="set -e http_proxy;set -e https_proxy"
 
 # File size
 alias fs="stat -f '%z bytes'"
 alias df="df -h"
-
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true & killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false & killall Finder"
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
@@ -99,10 +95,10 @@ function vimu
 end
 
 function dlaudio
-    youtube-dl -f bestaudio --extract-audio --audio-format mp3 $argv
+  youtube-dl -f bestaudio --extract-audio --audio-format mp3 $argv
 end
 
 function gi
-    curl -L -s https://www.gitignore.io/api/$argv
+  curl -L -s https://www.gitignore.io/api/$argv
 end
 
