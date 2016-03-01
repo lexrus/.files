@@ -45,7 +45,7 @@ alias df="df -h"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # Delete Apple System Logs
-alias dasl="sudo -rf /private/var/log/asl/*.asl"
+alias dasl="sudo rm -rf /private/var/log/asl/*.asl"
 
 # Delete DerivedData
 alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
