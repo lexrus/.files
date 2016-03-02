@@ -29,7 +29,7 @@ alias squish="git status -s;git commit -a --amend -C HEAD"
 alias ad="arc diff"
 
 alias v="vim"
-alias a="atom"
+alias a="arc"
 alias s="subl"
 alias c="ccat"
 

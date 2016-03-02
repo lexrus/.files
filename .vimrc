@@ -57,7 +57,7 @@ endif
 autocmd VimResized * :wincmd =
 
 " File types
-autocmd BufRead,BufNewFile Podfile,*.podspec set filetype=ruby
+autocmd BufRead,BufNewFile Podfile,*.podspec,lane set filetype=ruby
 autocmd BufRead,BufNewFile .arc* set filetype=json
 
 " Markdown
