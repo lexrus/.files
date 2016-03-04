@@ -37,6 +37,7 @@ set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH $HOME/go/bin
 set -x PATH /Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin $PATH
 set -x PATH $PATH $HOME/git/arcanist/bin
+set -x PATH $PATH $HOME/Dropbox/bin
 set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
