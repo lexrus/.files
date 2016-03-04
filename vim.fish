@@ -1,6 +1,10 @@
 # Install VIM
 brew install ctags
-brew install vim --with-lua --with-luajit --override-system-vi
+#brew install vim --with-lua --with-luajit --override-system-vi
+brew tap neovim/neovim
+brew install --HEAD neovim
+
+pip install neovim
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -17,3 +21,6 @@ vim +PlugInstall +qall
 
 # Inside of ~/.vim make /tmp, inside of which mkdir swap backup undo
 mkdir -p $HOME/.vim/tmp/{swap,backup,undo}
+
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim

@@ -40,7 +40,7 @@ set -x PATH $PATH $HOME/git/arcanist/bin
 set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
-set -x EDITOR vim
+set -x EDITOR nvim
 command --search rbenv >/dev/null; and begin
   . (rbenv init -|psub)
 end
@@ -52,7 +52,7 @@ alias wip="git commit -a -m WIP"
 alias squish="git status -s;git commit -a --amend -C HEAD"
 alias ad="arc diff"
 
-alias v="vim"
+alias v="nvim"
 alias a="arc"
 alias s="subl"
 alias c="ccat"
