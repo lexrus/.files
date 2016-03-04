@@ -38,7 +38,6 @@ recipes=(
   git
   git-extras
   gotags
-  graphivz
   htop-osx
   hub
   imagemagick
@@ -89,8 +88,13 @@ fi
 
 if [[ ! -d $HOME/.config/fish ]]; then
   mkdir -p $HOME/.config/fish
-  ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 fi
+
+if [[ ! -L $HOME/.config/fish/config.fish ]]; then
+  rm $HOME/.config/fish/config.fish
+fi
+
+ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 
 if [[ ! -h $HOME/.lldbinit ]]; then
   ln -s $HOME/.files/.lldbinit $HOME/.lldbinit
