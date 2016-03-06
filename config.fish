@@ -99,7 +99,7 @@ end
 
 function updateall
   brew update --all ;and brew upgrade --all
-  vim +PlugUpdate
+  vim +PlugUpdate +qall
 end
 
 function upgrade
@@ -115,7 +115,7 @@ function www
 end
 
 function vimu
-  vim +PlugUpdate
+  vim +PlugUpdate +qall
 end
 
 function dlaudio
