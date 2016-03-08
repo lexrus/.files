@@ -100,6 +100,10 @@ end
 function updateall
   brew update --all ;and brew upgrade --all
   vim +PlugUpdate +qall
+  pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+  pip install --upgrade pip
+  gem update
+  pod repo update
 end
 
 function upgrade
