@@ -94,6 +94,10 @@ if [[ ! -L $HOME/.config/fish/config.fish ]]; then
   rm $HOME/.config/fish/config.fish
 fi
 
+if [[ ! -h $HOME/.gemrc ]]; then
+  ln -s $HOME/.files/.gemrc $HOME/.gemrc
+fi
+
 ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 
 if [[ ! -h $HOME/.lldbinit ]]; then
