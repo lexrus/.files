@@ -42,6 +42,9 @@ set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
 set -x EDITOR nvim
+set -x LC_ALL en_US.UTF-8
+set -x LANG=en_US.UTF-8
+
 command --search rbenv >/dev/null; and begin
   . (rbenv init -|psub)
 end
