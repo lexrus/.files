@@ -52,12 +52,13 @@ end
 # Alias
 
 alias g="git"
-alias wip="git commit -a -m WIP"
-alias squish="git status -s;git commit -a --amend -C HEAD"
+alias wip="git commit -am WIP"
+alias squash="git status -s;git commit -a --amend -C HEAD"
 alias ad="arc diff"
+alias al="arc land --onto develop"
 
 alias v="nvim"
-alias a="arc"
+alias a="atom"
 alias s="subl"
 alias c="ccat"
 
