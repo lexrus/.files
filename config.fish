@@ -31,11 +31,14 @@ function fish_prompt
   echo -n ' '
 end
 
+# Swiftenv
+
+status --is-interactive; and . (swiftenv init -|psub)
+
 # Exports
 
 set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH $HOME/go/bin
-set -x PATH /Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin $PATH
 set -x PATH $PATH $HOME/git/arcanist/bin
 set -x PATH $PATH $HOME/Dropbox/bin
 set -x GOPATH $HOME/go
