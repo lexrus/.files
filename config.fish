@@ -37,7 +37,6 @@ status --is-interactive; and . (swiftenv init -|psub)
 
 # Exports
 
-set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH $HOME/go/bin
 set -x PATH $PATH $HOME/git/arcanist/bin
 set -x PATH $PATH $HOME/Dropbox/bin
@@ -46,7 +45,7 @@ set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
 set -x EDITOR nvim
 set -x LC_ALL en_US.UTF-8
-set -x LANG=en_US.UTF-8
+set -x LANG en_US.UTF-8
 
 command --search rbenv >/dev/null; and begin
   . (rbenv init -|psub)
@@ -59,6 +58,8 @@ alias wip="git commit -am WIP"
 alias squash="git status -s;git commit -a --amend -C HEAD"
 alias ad="arc diff"
 alias al="arc land --onto develop"
+alias lr="lunchy restart"
+alias lu="lunchy"
 
 alias v="nvim"
 alias a="atom"
