@@ -60,6 +60,7 @@ alias ad="arc diff"
 alias al="arc land --onto develop"
 alias lr="lunchy restart"
 alias lu="lunchy"
+alias fig="docker-compose"
 
 alias v="nvim"
 alias a="atom"
