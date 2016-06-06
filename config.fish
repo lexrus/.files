@@ -32,8 +32,7 @@ function fish_prompt
 end
 
 # Swiftenv
-
-status --is-interactive; and . (swiftenv init -|psub)
+status --is-interactive; and . (swiftenv init -|psub) 2>&1 | cat - > /dev/null
 
 # Exports
 
@@ -43,9 +42,15 @@ set -x PATH $PATH $HOME/Dropbox/bin
 set -x GOPATH $HOME/go
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
-set -x EDITOR nvim
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
+
+switch (uname)
+  case Darwin
+    set -x EDITOR nvim
+  case Linux
+    set -x EDITOR vim
+end
 
 command --search rbenv >/dev/null; and begin
   . (rbenv init -|psub)
@@ -107,24 +112,41 @@ function update
 end
 
 function updateall
-  brew update --all ;and brew upgrade --all
+  switch (uname)
+    case Darwin
+      brew update --all ;and brew upgrade --all
+      pod repo update
+    case Linux
+      apt-get update ;and apt-get upgrade -y
+  end
   vim +PlugUpdate +qall
   pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
   pip install --upgrade pip
   gem update
-  pod repo update
 end
 
 function upgrade
-  brew cask update
+  switch (uname)
+    case Darwin
+      brew update --all ;and brew upgrade --all
+      brew cask update ;and brew cask upgrade -y
+    case Linux
+      apt-get update ;and apt-get upgrade -y
+  end
 end
 
 function cleanup
-  brew cleanup ;and brew cask cleanup
+  switch (uname)
+    case Darwin
+      brew cleanup ;and brew cask cleanup
+    case Linux
+      apt-get clean; apt-get autoremove -y
+  end
 end
 
 function www
-  twistd -onl - --pidfile=/tmp/twistd.pid web --path=./ --port=8000
+  echo 'http://0.0.0.0:8000'
+  python -m SimpleHTTPServer 8000
 end
 
 function vimu

@@ -1,10 +1,13 @@
-# Install VIM
-brew install ctags
-#brew install vim --with-lua --with-luajit --override-system-vi
-brew tap neovim/neovim
-brew install --HEAD neovim
-
-pip install neovim
+switch (uname)
+  case Darwin
+    brew install ctags
+    brew tap neovim/neovim
+	brew install --HEAD neovim
+	brew install vim --with-lua --with-luajit --override-system-vi
+	pip install neovim
+  case Linux
+    apt-get install vim
+end
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

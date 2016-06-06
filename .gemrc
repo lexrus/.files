@@ -7,6 +7,3 @@ sources:
 - https://rubygems.org
 update_sources: true
 verbose: true
-
-http_proxy: http://127.0.0.1:7777
-https_proxy: http://127.0.0.1:7777
