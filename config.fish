@@ -32,14 +32,16 @@ function fish_prompt
 end
 
 # Swiftenv
-status --is-interactive; and . (swiftenv init -|psub) 2>&1 | cat - > /dev/null
+command --search swiftenv >/dev/null; and begin
+  status --is-interactive; and . (swiftenv init -|psub)
+end
 
 # Exports
 
-set -x PATH $PATH $HOME/go/bin
-set -x PATH $PATH $HOME/git/arcanist/bin
-set -x PATH $PATH $HOME/Dropbox/bin
-set -x GOPATH $HOME/go
+set -x PATH $PATH $HOME/go/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/git/arcanist/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
+set -x GOPATH $HOME/go 2>&1 | cat - > /dev/null
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
