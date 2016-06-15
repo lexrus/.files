@@ -49,6 +49,7 @@ set -x LANG en_US.UTF-8
 
 switch (uname)
   case Darwin
+    set -x PATH $PATH /usr/local/sbin | cat - > /dev/null
     set -x EDITOR nvim
   case Linux
     set -x EDITOR vim
