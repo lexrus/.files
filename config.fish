@@ -119,6 +119,7 @@ function updateall
     case Darwin
       brew update --all ;and brew upgrade --all
       pod repo update
+      softwareupdate -a -i
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
@@ -126,6 +127,7 @@ function updateall
   pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
   pip install --upgrade pip
   gem update
+  go get -u all
 end
 
 function upgrade
