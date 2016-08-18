@@ -134,7 +134,6 @@ function upgrade
   switch (uname)
     case Darwin
       brew update --all ;and brew upgrade --all
-      brew cask update ;and brew cask upgrade -y
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
