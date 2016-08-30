@@ -72,6 +72,7 @@ alias al="arc land --onto develop"
 alias lr="lunchy restart"
 alias lu="lunchy"
 alias fig="docker-compose"
+alias ax="axel -an 10 "
 
 alias v="nvim"
 alias a="atom"
