@@ -37,6 +37,7 @@ recipes=(
   git-extras
   gotags
   htop-osx
+  httpstat
   hub
   imagemagick
   libsodium
