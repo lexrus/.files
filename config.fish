@@ -116,13 +116,13 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 
 function update
-  brew update --all ;and brew upgrade --all
+  brew update --all ;and brew upgrade
 end
 
 function updateall
   switch (uname)
     case Darwin
-      brew update --all ;and brew upgrade --all
+      brew update --all ;and brew upgrade
       pod repo update
       softwareupdate -a -i
     case Linux
@@ -138,7 +138,7 @@ end
 function upgrade
   switch (uname)
     case Darwin
-      brew update --all ;and brew upgrade --all
+      brew update --all ;and brew upgrade
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
