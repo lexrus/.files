@@ -39,12 +39,14 @@ end
 # Exports
 
 set -x PATH $PATH $HOME/go/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH /usr/local/Cellar/node/7.0.0/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH /usr/local/Cellar/node/7.3.0/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/git/arcanist/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
 set -x GOPATH $HOME/go 2>&1 | cat - > /dev/null
 set -x SWIFTENV_ROOT $HOME/.swiftenv 2>&1 | cat - > /dev/null
 set -x PATH $SWIFTENV_ROOT/bin $PATH 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/Documents/google-cloud-sdk 2>&1 | cat - > /dev/null
+
 status --is-interactive; and . (swiftenv init -|psub)
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
@@ -122,8 +124,7 @@ end
 function updateall
   switch (uname)
     case Darwin
-      brew update --all ;and brew upgrade
-      pod repo update
+      update
       softwareupdate -a -i
     case Linux
       apt-get update ;and apt-get upgrade -y
@@ -138,7 +139,7 @@ end
 function upgrade
   switch (uname)
     case Darwin
-      brew update --all ;and brew upgrade
+      update
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
