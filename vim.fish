@@ -3,7 +3,6 @@ switch (uname)
     brew install ctags
     brew tap neovim/neovim
 	brew install --HEAD neovim
-	brew install vim --with-lua --with-luajit --override-system-vi
 	pip install neovim
   case Linux
     apt-get install vim

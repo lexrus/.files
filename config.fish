@@ -1,3 +1,32 @@
+# Exports
+
+set -x PATH $PATH $HOME/go/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH /usr/local/sbin | cat - > /dev/null
+set -x PATH $PATH /usr/local/Cellar/node/7.3.0/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/git/arcanist/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
+set -x GOPATH $HOME/go 2>&1 | cat - > /dev/null
+set -x SWIFTENV_ROOT $HOME/.swiftenv 2>&1 | cat - > /dev/null
+set -x PATH $SWIFTENV_ROOT/bin $PATH 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/Documents/google-cloud-sdk 2>&1 | cat - > /dev/null
+set -x GO15VENDOREXPERIMENT 1
+set -x ANSIBLE_NOCOWS 1
+set -x LC_ALL en_US.UTF-8
+set -x LANG en_US.UTF-8
+
+set -x EDITOR nvim
+
+# Swiftenv
+command --search swiftenv >/dev/null; and begin
+  status --is-interactive; and . (swiftenv init -|psub)
+end
+
+command --search rbenv >/dev/null; and begin
+  . (rbenv init -|psub)
+end
+
+# Fish
+
 set fish_greeting ""
 
 function _git_branch_name
@@ -31,40 +60,6 @@ function fish_prompt
   echo -n ' '
 end
 
-# Swiftenv
-command --search swiftenv >/dev/null; and begin
-  status --is-interactive; and . (swiftenv init -|psub)
-end
-
-# Exports
-
-set -x PATH $PATH $HOME/go/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH /usr/local/Cellar/node/7.3.0/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/git/arcanist/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
-set -x GOPATH $HOME/go 2>&1 | cat - > /dev/null
-set -x SWIFTENV_ROOT $HOME/.swiftenv 2>&1 | cat - > /dev/null
-set -x PATH $SWIFTENV_ROOT/bin $PATH 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/Documents/google-cloud-sdk 2>&1 | cat - > /dev/null
-
-status --is-interactive; and . (swiftenv init -|psub)
-set -x GO15VENDOREXPERIMENT 1
-set -x ANSIBLE_NOCOWS 1
-set -x LC_ALL en_US.UTF-8
-set -x LANG en_US.UTF-8
-
-switch (uname)
-  case Darwin
-    set -x PATH $PATH /usr/local/sbin | cat - > /dev/null
-    set -x EDITOR nvim
-  case Linux
-    set -x EDITOR vim
-end
-
-command --search rbenv >/dev/null; and begin
-  . (rbenv init -|psub)
-end
-
 # Alias
 
 alias g="git"
@@ -78,13 +73,11 @@ alias fig="docker-compose"
 alias ax="axel -an 10 "
 
 alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 alias a="atom"
 alias s="subl"
 alias c="ccat"
-
-# Proxy
-alias pon="set -x http_proxy http://127.0.0.1:7777;set -x https_proxy http://127.0.0.1:7777"
-alias poff="set -e http_proxy;set -e https_proxy"
 
 # File size
 alias fs="stat -f '%z bytes'"

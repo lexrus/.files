@@ -212,23 +212,3 @@ function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
   endif
 endfunction
-
-" tagbar
-nmap <leader>tt :TagbarToggle<CR>
-let g:tagbar_type_swift = {
-  \ 'ctagstype': 'swift',
-  \ 'kinds' : [
-    \ 'n:Enums',
-    \ 't:Typealiases',
-    \ 'p:Protocols',
-    \ 's:Structs',
-    \ 'c:Classes',
-    \ 'f:Functions',
-    \ 'v:Variables',
-    \ 'e:Extensions'
-  \ ],
-  \ 'sort' : 0
-\ }
-
-
-
