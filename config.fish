@@ -65,8 +65,6 @@ end
 alias g="git"
 alias wip="git commit -am WIP"
 alias squash="git status -s;git commit -a --amend -C HEAD"
-alias ad="arc diff"
-alias al="arc land --onto develop"
 alias lr="lunchy restart"
 alias lu="lunchy"
 alias fig="docker-compose"
@@ -91,9 +89,6 @@ alias dasl="sudo rm -rf /private/var/log/asl/*.asl"
 
 # Delete DerivedData
 alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
-
-# Open any workspace if it exists, otherwise open the project
-alias ox="open ./*.xcworkspace 2>/dev/null; open ./*.xcodeproj 2>/dev/null"
 
 # Open the plugin folder of Xcode
 alias xcp="open $HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins"
