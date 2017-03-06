@@ -43,10 +43,6 @@ map <C-l> <C-W>l
 
 map <leader>ss :setlocal spell!<CR>
 
-" 80 column layout concerns
-highlight OverLength ctermbg=53 ctermfg=197 guibg=#5f005f
-match OverLength /\%81v.\+/
-
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
@@ -110,10 +106,10 @@ highlight Pmenu ctermfg=231 ctermbg=55 guifg=#ffffff guibg=#5f00af
 " deocomplete
 let g:deoplete#enable_at_startup = 1
 
-" ultisnips @seealso http://stackoverflow.com/a/22253548
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<s-tab>'
+" Neocomplete
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " Go lang
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
