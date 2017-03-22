@@ -8,7 +8,7 @@ set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
 set -x GOPATH $HOME/go 2>&1 | cat - > /dev/null
 set -x SWIFTENV_ROOT $HOME/.swiftenv 2>&1 | cat - > /dev/null
 set -x PATH $SWIFTENV_ROOT/bin $PATH 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/Documents/google-cloud-sdk 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/Documents/google-cloud-sdk/bin 2>&1 | cat - > /dev/null
 set -x GO15VENDOREXPERIMENT 1
 set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
