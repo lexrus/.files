@@ -1,31 +1,7 @@
-# Exports
-
-set -x PATH $PATH $HOME/go/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH /usr/local/sbin | cat - > /dev/null
-set -x PATH $PATH /usr/local/Cellar/node/7.3.0/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/git/arcanist/bin 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
-set -x GOPATH $HOME/go 2>&1 | cat - > /dev/null
-set -x SWIFTENV_ROOT $HOME/.swiftenv 2>&1 | cat - > /dev/null
-set -x PATH $SWIFTENV_ROOT/bin $PATH 2>&1 | cat - > /dev/null
-set -x PATH $PATH $HOME/Documents/google-cloud-sdk/bin 2>&1 | cat - > /dev/null
-set -x GO15VENDOREXPERIMENT 1
-set -x ANSIBLE_NOCOWS 1
-set -x LC_ALL en_US.UTF-8
-set -x LANG en_US.UTF-8
-
-set -x EDITOR nvim
-
-# Swiftenv
-command --search swiftenv >/dev/null; and begin
-  status --is-interactive; and . (swiftenv init -|psub)
+if status --is-interactive;
+  source $HOME/.files/exports.fish
+  source $HOME/.files/alias.fish
 end
-
-command --search rbenv >/dev/null; and begin
-  . (rbenv init -|psub)
-end
-
-# Fish
 
 set fish_greeting ""
 
@@ -60,62 +36,11 @@ function fish_prompt
   echo -n ' '
 end
 
-# Alias
-
-alias g="git"
-alias wip="git commit -am WIP"
-alias squash="git status -s;git commit -a --amend -C HEAD"
-alias lr="lunchy restart"
-alias lu="lunchy"
-alias fig="docker-compose"
-alias ax="axel -an 10 "
-
-alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
-alias a="atom"
-alias s="subl"
-alias c="ccat"
-
-# File size
-alias fs="stat -f '%z bytes'"
-alias df="df -h"
-
-# URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
-# Delete Apple System Logs
-alias dasl="sudo rm -rf /private/var/log/asl/*.asl"
-
-# Delete DerivedData
-alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
-
-# Open the plugin folder of Xcode
-alias xcp="open $HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins"
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
-
-# Recursively delete `.DS_Store` files
-alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
-
-# Get WAN IP
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-
-# Get local IP
-alias localip="ipconfig getifaddr en1"
-
-function update
-  brew update --all ;and brew upgrade
-end
-
 function updateall
+  upgrade
   switch (uname)
     case Darwin
-      update
       softwareupdate -a -i
-    case Linux
-      apt-get update ;and apt-get upgrade -y
   end
   vim +PlugUpdate +qall
   pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
@@ -127,7 +52,7 @@ end
 function upgrade
   switch (uname)
     case Darwin
-      update
+      brew update --all ;and brew upgrade
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
@@ -158,4 +83,3 @@ end
 function gi
   curl -L -s https://www.gitignore.io/api/$argv
 end
-
