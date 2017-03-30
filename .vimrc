@@ -13,11 +13,8 @@ call plug#end()
 syntax on
 let g:rehash256 = 1
 set t_Co=256
-set background=light
-let g:PaperColor_Theme_Options = {
-  \   'transparent_background': 1
-  \ }
-colorscheme PaperColor
+set background=dark
+colorscheme Molokai
 
 set backupcopy=yes                                           " see :help crontab
 set clipboard=unnamed                                        " yank and paste with the system clipboard
@@ -77,7 +74,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Airline
-let g:airline_theme = "light"
+let g:airline_theme = "powerlineish"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
