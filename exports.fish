@@ -3,6 +3,7 @@ set -x PATH $PATH /usr/local/Cellar/node/7.7.4/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Documents/google-cloud-sdk/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Documents/flutter/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/.local/bin 2>&1 | cat - > /dev/null
 
 set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
