@@ -1,3 +1,8 @@
+function setenv
+    set -gx $argv
+end
+# See https://github.com/fish-shell/fish-shell/issues/4103
+
 set -x PATH $PATH /usr/local/sbin | cat - > /dev/null
 set -x PATH $PATH /usr/local/Cellar/node/7.7.4/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
