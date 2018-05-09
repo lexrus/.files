@@ -3,11 +3,11 @@ function setenv
 end
 # See https://github.com/fish-shell/fish-shell/issues/4103
 
-set -x PATH $PATH /usr/local/Cellar/node/8.9.1/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Documents/google-cloud-sdk/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Documents/flutter/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/.local/bin 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/Library/Android/sdk/platform-tools 2>&1 | cat - > /dev/null
 
 set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
