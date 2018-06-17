@@ -10,7 +10,6 @@ alias ax="axel -an 10 "
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
-alias a="atom"
 alias s="subl"
 alias c="ccat"
 
@@ -31,7 +30,7 @@ alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 alias xcp="open $HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # Recursively delete `.DS_Store` files
 alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"

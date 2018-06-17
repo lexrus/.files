@@ -26,6 +26,7 @@ function brew_install_recipes() {
 # Homebrew recipes
 recipes=(
   axel
+  carthage
   chisel
   coreutils
   ctags
@@ -35,6 +36,7 @@ recipes=(
   fish
   git
   git-extras
+  go
   gotags
   htop-osx
   httpstat
@@ -51,9 +53,9 @@ recipes=(
   python
   qrencode
   ranger
+  rbenv
   rename
   renameutil
-  rbenv
   ruby-build
   swiftlint
   tig
