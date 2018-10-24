@@ -8,6 +8,7 @@ set -x PATH $PATH $HOME/Documents/google-cloud-sdk/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Documents/flutter/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/.local/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/Library/Android/sdk/platform-tools 2>&1 | cat - > /dev/null
+set -x PATH $PATH $HOME/.pub-cache/bin 2>&1 | cat - > /dev/null
 
 set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
