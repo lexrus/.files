@@ -21,6 +21,7 @@ set -x EDITOR nvim
 if test -d $HOME/go
   set -x GOPATH $HOME/go
   set -x GO15VENDOREXPERIMENT 1
+  set -x GOPROXY http://localhost:9090
   set -x PATH $PATH $HOME/go/bin
 end
 
