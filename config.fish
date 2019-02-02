@@ -1,9 +1,12 @@
+set bundler_plugin_execs pod fastlane xcpretty
+
 if status --is-interactive;
   source $HOME/.files/exports.fish
   source $HOME/.files/alias.fish
 end
 
 set fish_greeting ""
+
 
 function _git_branch_name
   echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
