@@ -10,7 +10,7 @@ alias ax="axel -an 10 "
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
-alias s="subl"
+alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias c="ccat"
 
 # File size
