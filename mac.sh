@@ -45,8 +45,6 @@ recipes=(
   libsodium
   libxml2
   lynx
-  mackup
-  mercurial
   moreutils
   mosh
   openssl

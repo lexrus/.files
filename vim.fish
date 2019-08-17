@@ -1,9 +1,6 @@
 switch (uname)
   case Darwin
     brew install ctags
-    brew tap neovim/neovim
-	brew install --HEAD neovim
-	pip install neovim
   case Linux
     apt-get install vim
 end

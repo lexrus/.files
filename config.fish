@@ -46,10 +46,9 @@ function updateall
       softwareupdate -a -i
   end
   vim +PlugUpdate +qall
-  pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
-  pip install --upgrade pip
+  pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+  pip3 install --upgrade pip
   gem update
-  go get -u all
 end
 
 function upgrade

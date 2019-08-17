@@ -10,7 +10,7 @@ set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 
-set -x EDITOR nvim
+set -x EDITOR vim
 
 # rbenv
 command --search rbenv >/dev/null; and begin

@@ -7,9 +7,8 @@ alias lc='colorls -r'
 alias fig="docker-compose"
 alias ax="axel -an 10 "
 
-alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
+alias v="vim"
+alias vi="vim"
 alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias c="ccat"
 
