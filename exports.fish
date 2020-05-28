@@ -16,6 +16,7 @@ set -x EDITOR vim
 command --search rbenv >/dev/null; and begin
   . (rbenv init -|psub)
 end
+set -x RUBYOPT -W0
 
 # SDKs
 set -x PATH $PATH $HOME/SDKs/google-cloud-sdk/bin 2>&1 | cat - > /dev/null
