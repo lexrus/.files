@@ -12,6 +12,9 @@ alias vi="vim"
 alias s="subl"
 alias c="ccat"
 
+# Weekly git log
+alias wl='git log --pretty=format:"%ad: %s" --date=short --after=(date -v-6d +"%Y-%m-%d") --author=(git config user.name)'
+
 # File size
 alias fs="stat -f '%z bytes'"
 alias df="df -h"
