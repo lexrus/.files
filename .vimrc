@@ -105,14 +105,6 @@ nnoremap <Leader><Leader> :TagbarOpen<CR><C-W>l<C-W>s:e .<CR><C-W>h:let g:netrw_
 " Popup Menu
 highlight Pmenu ctermfg=231 ctermbg=55 guifg=#ffffff guibg=#5f00af
 
-" deocomplete
-let g:deoplete#enable_at_startup = 1
-
-" Neocomplete
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
 " Go lang
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.go set nolist

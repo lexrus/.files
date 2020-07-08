@@ -36,6 +36,7 @@ recipes=(
   fish
   git
   git-extras
+  git-lfs
   go
   gotags
   htop-osx
