@@ -3,6 +3,7 @@ function setenv
 end
 # See https://github.com/fish-shell/fish-shell/issues/4103
 
+set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/.local/bin 2>&1 | cat - > /dev/null
 
