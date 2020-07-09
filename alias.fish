@@ -3,9 +3,10 @@ alias wip="git commit -am WIP"
 alias squash="git status -s;git commit -a --amend -C HEAD"
 alias lr="lunchy restart"
 alias lu="lunchy"
-alias lc='colorls -r'
+alias lc="colorls -r"
 alias fig="docker-compose"
 alias ax="axel -an 10 "
+alias pip3="python3 -m pip"
 
 alias v="vim"
 alias vi="vim"
