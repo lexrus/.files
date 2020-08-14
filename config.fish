@@ -85,3 +85,6 @@ end
 function gi
   curl -L -s https://www.gitignore.io/api/$argv
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
