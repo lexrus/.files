@@ -25,6 +25,10 @@ set -x PATH $PATH $HOME/SDKs/flutter/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/SDKs/arcanist/arcanist/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/.pub-cache/bin 2>&1 | cat - > /dev/null
 
+# iOSRe
+set -x PATH $PATH /opt/MonkeyDev/bin 2>&1 | cat - > /dev/null
+set -x MonkeyDevPath /opt/MonkeyDev
+
 # Android
 if test -d $HOME/Library/android/sdk
   set -x ANDROID_HOME $HOME/Library/android/sdk
