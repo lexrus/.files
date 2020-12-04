@@ -31,31 +31,17 @@ recipes=(
   coreutils
   ctags
   curl
-  ffmpeg
-  findutils
   fish
   git
-  git-extras
   git-lfs
-  go
-  gotags
   htop-osx
   httpstat
   hub
   imagemagick
-  libsodium
-  libxml2
   lynx
-  moreutils
   mosh
-  openssl
-  python
   qrencode
   ranger
-  rbenv
-  rename
-  renameutil
-  ruby-build
   swiftlint
   tig
   tmux

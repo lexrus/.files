@@ -43,3 +43,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Get local IP
 alias localip="ipconfig getifaddr en1"
+
+# Temporary alias
+alias code="code-exploration"

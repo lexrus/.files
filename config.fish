@@ -71,7 +71,7 @@ end
 
 function www
   echo 'http://0.0.0.0:8000'
-  python -m SimpleHTTPServer 8000
+  python3 -m http.server 8000
 end
 
 function vimu
