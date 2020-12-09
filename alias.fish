@@ -6,7 +6,6 @@ alias lu="lunchy"
 alias lc="colorls -r"
 alias fig="docker-compose"
 alias ax="axel -an 10 "
-alias pip3="python3 -m pip"
 
 alias v="vim"
 alias vi="vim"
@@ -42,7 +41,7 @@ alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Get local IP
-alias localip="ipconfig getifaddr en1"
+alias localip="ipconfig getifaddr en0"
 
 # Temporary alias
 alias code="code-exploration"

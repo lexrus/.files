@@ -40,6 +40,7 @@ recipes=(
   imagemagick
   lynx
   mosh
+  neofetch
   qrencode
   ranger
   swiftlint

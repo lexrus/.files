@@ -5,8 +5,11 @@ if status --is-interactive;
   source $HOME/.files/alias.fish
 end
 
-set fish_greeting ""
-
+# set fish_greeting ""
+function fish_greeting
+  # fortune 2>/dev/null
+  neofetch
+end
 
 function _git_branch_name
   echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
