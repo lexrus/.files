@@ -11,6 +11,7 @@ alias v="vim"
 alias vi="vim"
 alias s="subl"
 alias c="ccat"
+alias code="code-insiders"
 
 # Weekly git log
 alias wl='git log --pretty=format:"%ad: %s" --date=short --after=(date -v-6d +"%Y-%m-%d") --author=(git config user.name)'
@@ -42,6 +43,3 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Get local IP
 alias localip="ipconfig getifaddr en0"
-
-# Temporary alias
-alias code="code-exploration"

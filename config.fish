@@ -57,10 +57,11 @@ end
 function upgrade
   switch (uname)
     case Darwin
-      brew update --all ;and brew upgrade
+      brew update ;and brew upgrade --display-times -q
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
+  cleanup
 end
 
 function cleanup
