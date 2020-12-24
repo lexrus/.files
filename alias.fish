@@ -46,4 +46,4 @@ alias localip="ipconfig getifaddr en0"
 
 # M1
 alias m1ipa="sudo xattr -dr com.apple.quarantine"
-alias ipadir="open ~/Library/Group Containers/K36BKF7T3D.group.com.apple.configurator/Caches/Assets/TemporaryItems/MobileApps"
+alias ipadir="open ~/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library"
