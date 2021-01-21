@@ -8,6 +8,9 @@ set -g PATH /opt/homebrew/opt/openjdk/bin $PATH
 set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH $HOME/Dropbox/bin 2>&1 | cat - > /dev/null
 set -x PATH $PATH $HOME/.local/bin 2>&1 | cat - > /dev/null
+set -gx LDFLAGS "-L/opt/homebrew/opt/readline/lib"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/readline/include"
+set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/readline/lib/pkgconfig"
 
 set -x ANSIBLE_NOCOWS 1
 set -x LC_ALL en_US.UTF-8
