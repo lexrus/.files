@@ -49,6 +49,7 @@ recipes=(
   tree
   wget
   wrk
+  openjdk
 )
 
 brew_install_recipes

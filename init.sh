@@ -47,6 +47,11 @@ if [[ ! -h $HOME/.lldbinit ]]; then
   ln -s $HOME/.files/.lldbinit $HOME/.lldbinit
 fi
 
+if [[ ! -h $HOME/.config/neofetch/config.conf ]]; then
+  mkdir -p $HOME/.config/neofetch/
+  ln -s $HOME/.files/neofetch.conf $HOME/.config/neofetch/config.conf
+fi
+
 "$fish" vim.fish
 
 echo "Done."

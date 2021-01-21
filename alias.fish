@@ -45,5 +45,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
 # M1
+alias ibrew="arch -x86_64 /usr/local/bin/brew"
+alias mbrew="arch -arm64e /opt/homebrew/bin/brew"
 alias m1ipa="sudo xattr -dr com.apple.quarantine"
 alias ipadir="open ~/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library"
