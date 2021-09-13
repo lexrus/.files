@@ -28,8 +28,8 @@ alias dasl="sudo rm -rf /private/var/log/asl/*.asl"
 # Delete DerivedData
 alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 
-# Open the plugin folder of Xcode
-alias xcp="open $HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins"
+# Flush SPM caches
+alias dspm="rm -rf $HOME/Library/Caches/org.swift.swiftpm/"
 
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
