@@ -4,13 +4,13 @@ function setenv
     set -gx $argv
 end
 
-fish_add_path /usr/local/sbin
 
 if [ (uname -p) = "arm" ]
   fish_add_path /opt/homebrew/bin
-  fish_add_path /opt/homebrew/sbin $PATH
+  fish_add_path /opt/homebrew/sbin
   fish_add_path /opt/homebrew/opt/openjdk/bin
   fish_add_path /opt/homebrew/opt/icu4c/bin
+  fish_add_path /usr/local/sbin
   setenv LDFLAGS $LDFLAGS "-L/opt/homebrew/opt/readline/lib"
   setenv LDFLAGS $LDFLAGS "-L/opt/homebrew/opt/ncurses/lib"
   setenv LDFLAGS $LDFLAGS "-L/opt/homebrew/opt/sqlite/lib"

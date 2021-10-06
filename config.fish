@@ -30,6 +30,7 @@ function updateall
   pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
   pip3 install --upgrade pip
   gem update
+  cleanup
 end
 
 function upgrade
@@ -39,16 +40,16 @@ function upgrade
     case Linux
       apt-get update ;and apt-get upgrade -y
   end
-  cleanup
 end
 
 function cleanup
   switch (uname)
     case Darwin
-      brew cleanup ;and brew cask cleanup
+      brew cleanup
     case Linux
       apt-get clean; apt-get autoremove -y
   end
+  gem clean
 end
 
 function www

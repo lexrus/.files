@@ -1,16 +1,9 @@
 alias g="git"
 alias wip="git commit -am WIP"
 alias squash="git status -s;git commit -a --amend -C HEAD"
-alias lr="lunchy restart"
-alias lu="lunchy"
-alias lc="colorls -r"
-alias fig="docker-compose"
-alias ax="axel -an 10 "
-
 alias v="vim"
 alias vi="vim"
 alias s="subl"
-alias c="ccat"
 
 # Weekly git log
 alias wl='git log --pretty=format:"%ad: %s" --date=short --after=(date -v-6d +"%Y-%m-%d") --author=(git config user.name)'
@@ -48,4 +41,3 @@ alias ibrew="arch -x86_64 /usr/local/bin/brew"
 alias mbrew="arch -arm64e /opt/homebrew/bin/brew"
 alias m1ipa="sudo xattr -dr com.apple.quarantine"
 alias ipadir="open ~/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library"
-alias pod="arch -x86_64 pod"
