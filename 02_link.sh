@@ -2,13 +2,6 @@
 
 export PATH="/usr/local/sbin:$PATH"
 
-unamestr=`uname`
-if [[ "$unamestr" == 'Darwin' ]]; then
-   source mac.sh
-elif [[ "$unamestr" == 'Linux' ]]; then
-   apt-get install fish -y
-fi
-
 # htop
 if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop")" != "root:wheel" || ! "$(($(stat -L -f "%DMp" "$binroot/htop") & 4))" ]]; then
   echo "Updating htop permissions"
@@ -45,11 +38,6 @@ ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 
 if [[ ! -h $HOME/.lldbinit ]]; then
   ln -s $HOME/.files/.lldbinit $HOME/.lldbinit
-fi
-
-if [[ ! -h $HOME/.config/neofetch/config.conf ]]; then
-  mkdir -p $HOME/.config/neofetch/
-  ln -s $HOME/.files/neofetch.conf $HOME/.config/neofetch/config.conf
 fi
 
 "$fish" vim.fish

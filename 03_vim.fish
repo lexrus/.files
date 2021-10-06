@@ -1,10 +1,3 @@
-switch (uname)
-  case Darwin
-    brew install ctags
-  case Linux
-    apt-get install vim
-end
-
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

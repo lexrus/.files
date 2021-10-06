@@ -3,7 +3,8 @@ alias wip="git commit -am WIP"
 alias squash="git status -s;git commit -a --amend -C HEAD"
 alias v="vim"
 alias vi="vim"
-alias s="subl"
+alias s="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+alias subl="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
 
 # Weekly git log
 alias wl='git log --pretty=format:"%ad: %s" --date=short --after=(date -v-6d +"%Y-%m-%d") --author=(git config user.name)'
