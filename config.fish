@@ -57,6 +57,14 @@ function www
   python3 -m http.server 8000
 end
 
+function pman
+  man -t $argv | open -f -a "Preview"
+  sleep 0.5
+  osascript -e 'tell application "System Events" to key code "3" using {command down, control down}'
+  sleep 0.5
+  osascript -e 'tell application "System Events" to keystroke "3" using {command down}'
+end
+
 function vimu
   vim +PlugUpdate +qall
 end
