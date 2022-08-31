@@ -23,7 +23,7 @@ alias dasl="sudo rm -rf /private/var/log/asl/*.asl"
 alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 
 # Flush SPM caches
-alias dspm="rm -rf $HOME/Library/Caches/org.swift.swiftpm/"
+alias dspm="rm -rf $HOME/Library/Caches/org.swift.swiftpm/;rm -rf $HOME/Library/org.swift.swiftpm"
 
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
