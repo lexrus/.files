@@ -25,6 +25,9 @@ alias ded="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 # Flush SPM caches
 alias dspm="rm -rf $HOME/Library/Caches/org.swift.swiftpm/;rm -rf $HOME/Library/org.swift.swiftpm"
 
+# SymbolicateCrash
+alias symbolicatecrash="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash"
+
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
