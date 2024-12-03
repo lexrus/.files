@@ -24,6 +24,7 @@ recipes=(
   htop-osx
   httpstat
   hub
+  lazygit
   lynx
   mosh
   qrencode
@@ -37,3 +38,4 @@ recipes=(
 )
 
 brew_install_recipes
+
