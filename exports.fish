@@ -73,3 +73,19 @@ if test -d $HOME/.swiftenv
         status --is-interactive; and . (swiftenv init -|psub)
     end
 end
+
+# Mise
+if test -e $HOME/.local/bin/mise
+    ~/.local/bin/mise activate fish | source
+    echo "mise activated"
+end
+
+# Flutter
+if test -e $HOME/.pub-cache/bin
+    fish_add_path $HOME/.pub-cache/bin
+end
+
+# Windsurf
+if test -e $HOME/.codeium/windsurf/bin
+    fish_add_path $HOME/.codeium/windsurf/bin
+end

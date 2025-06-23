@@ -34,7 +34,7 @@ recipes=(
   tree
   wget
   wrk
-  rtx
+  mise
 )
 
 brew_install_recipes

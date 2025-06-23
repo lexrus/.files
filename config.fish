@@ -8,7 +8,7 @@ end
 set fish_greeting ""
 function fish_greeting
   # neofetch
-  fortune 2>/dev/null
+  # fortune 2>/dev/null
 end
 
 function fish_prompt
@@ -82,4 +82,4 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 set openssl_path (brew --prefix openssl@1.1)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$openssl_path"
 
-rtx activate fish | source
+mise activate fish --silent | source
