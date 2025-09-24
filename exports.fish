@@ -11,6 +11,8 @@ if [ (uname -p) = arm ]
     fish_add_path /opt/homebrew/opt/openjdk/bin
     fish_add_path /opt/homebrew/opt/icu4c/bin
     fish_add_path /usr/local/sbin
+    fish_add_path $HOME/.claude/local
+    fish_add_path $HOME/.cargo/bin
     setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/readline/lib
     setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/ncurses/lib
     setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/sqlite/lib

@@ -83,3 +83,7 @@ set openssl_path (brew --prefix openssl@1.1)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$openssl_path"
 
 mise activate fish --silent | source
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
