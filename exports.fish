@@ -61,9 +61,6 @@ end
 # Golang
 if test -d $HOME/go
     setenv GOPATH $HOME/go
-    setenv GO15VENDOREXPERIMENT 1
-    setenv GO111MODULE on
-    setenv GOPROXY http://localhost:9090
     fish_add_path $HOME/go/bin
 end
 
