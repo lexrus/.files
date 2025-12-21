@@ -88,3 +88,8 @@ end
 if test -e $HOME/.codeium/windsurf/bin
     fish_add_path $HOME/.codeium/windsurf/bin
 end
+
+# Antigravity
+if test -e $HOME/.antigravity/antigravity/bin
+    fish_add_path $HOME/.antigravity/antigravity/bin
+end

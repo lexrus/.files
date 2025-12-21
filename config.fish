@@ -79,7 +79,7 @@ end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-set openssl_path (brew --prefix openssl@1.1)
+set openssl_path (brew --prefix openssl@3)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$openssl_path"
 
 mise activate fish --silent | source
