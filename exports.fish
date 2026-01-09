@@ -30,6 +30,7 @@ if [ (uname -p) = arm ]
     setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/icu4c/lib/pkgconfig
 end
 
+setenv HOMEBREW_AUTO_UPDATE_SECS 259200
 setenv ANSIBLE_NOCOWS 1
 setenv LC_ALL en_US.UTF-8
 setenv LANG en_US.UTF-8
