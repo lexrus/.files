@@ -21,7 +21,7 @@ recipes=(
   fish
   git
   git-lfs
-  htop-osx
+  htop
   httpstat
   hub
   lazygit
