@@ -1,6 +1,8 @@
 # Install vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if not test -f ~/.vim/autoload/plug.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+end
 
 # Link
 unlink $HOME/.vimrc | rm $HOME/.vimrc
