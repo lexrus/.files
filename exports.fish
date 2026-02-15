@@ -68,7 +68,6 @@ end
 # Mise
 if test -e $HOME/.local/bin/mise
     ~/.local/bin/mise activate fish | source
-    echo "mise activated"
 end
 
 # Windsurf
