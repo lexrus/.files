@@ -6,13 +6,7 @@ end
 
 
 if [ (uname -p) = arm ]
-    fish_add_path /opt/homebrew/bin
-    fish_add_path /opt/homebrew/sbin
-    fish_add_path /opt/homebrew/opt/openjdk/bin
-    fish_add_path /opt/homebrew/opt/icu4c/bin
-    fish_add_path /usr/local/sbin
-    fish_add_path $HOME/.claude/local
-    fish_add_path $HOME/.cargo/bin
+    fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /opt/homebrew/opt/openjdk/bin /opt/homebrew/opt/icu4c/bin /usr/local/sbin $HOME/.claude/local $HOME/.cargo/bin
     setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/readline/lib
     setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/ncurses/lib
     setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/sqlite/lib
@@ -44,10 +38,7 @@ end
 setenv RUBYOPT -W0
 
 # SDKs
-fish_add_path $HOME/SDKs/google-cloud-sdk/bin
-fish_add_path $HOME/fvm/default/bin
-fish_add_path $HOME/SDKs/arcanist/arcanist/bin
-fish_add_path $HOME/.pub-cache/bin
+fish_add_path $HOME/SDKs/google-cloud-sdk/bin $HOME/fvm/default/bin $HOME/SDKs/arcanist/arcanist/bin $HOME/.pub-cache/bin
 
 # iOSRe
 fish_add_path /opt/MonkeyDev/bin
@@ -78,11 +69,6 @@ end
 if test -e $HOME/.local/bin/mise
     ~/.local/bin/mise activate fish | source
     echo "mise activated"
-end
-
-# Flutter
-if test -e $HOME/.pub-cache/bin
-    fish_add_path $HOME/.pub-cache/bin
 end
 
 # Windsurf
