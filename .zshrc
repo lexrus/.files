@@ -60,7 +60,7 @@ alias fs="stat -f '%z bytes'"
 alias df="df -h"
 
 # URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode='python3 -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.argv[1]))"'
 
 # Delete Apple System Logs
 alias dasl="sudo rm -rf /private/var/log/asl/*.asl"
