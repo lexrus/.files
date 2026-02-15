@@ -27,8 +27,8 @@ function updateall
       softwareupdate -a -i
   end
   vim +PlugUpdate +qall
-  pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
   pip3 install --upgrade pip
+  pip3 list --outdated --format=json --exclude-editable --local | python3 -c "import sys, json, subprocess; pkgs = [p['name'] for p in json.load(sys.stdin)]; subprocess.check_call(['pip3', 'install', '-U'] + pkgs) if pkgs else None"
   gem update
   cleanup
 end
