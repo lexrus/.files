@@ -7,21 +7,11 @@ end
 
 if [ (uname -p) = arm ]
     fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /opt/homebrew/opt/openjdk/bin /opt/homebrew/opt/icu4c/bin /usr/local/sbin $HOME/.claude/local $HOME/.cargo/bin
-    setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/readline/lib
-    setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/ncurses/lib
-    setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/sqlite/lib
-    setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/libffi/lib
-    setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/icu4c/lib
-    setenv CPPFLAGS $CPPFLAGS -I/opt/homebrew/opt/readline/include
-    setenv CPPFLAGS $CPPFLAGS -I/opt/homebrew/opt/ncurses/include
-    setenv CPPFLAGS $CPPFLAGS -I/opt/homebrew/opt/sqlite/include
-    setenv CPPFLAGS $CPPFLAGS -I/opt/homebrew/opt/libffi/include
-    setenv CPPFLAGS $CPPFLAGS -I/opt/homebrew/opt/icu4c/include
-    setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/readline/lib/pkgconfig
-    setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/ncurses/lib/pkgconfig
-    setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/sqlite/lib/pkgconfig
-    setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/libffi/lib/pkgconfig
-    setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/icu4c/lib/pkgconfig
+    for pkg in readline ncurses sqlite libffi icu4c
+        setenv LDFLAGS $LDFLAGS -L/opt/homebrew/opt/$pkg/lib
+        setenv CPPFLAGS $CPPFLAGS -I/opt/homebrew/opt/$pkg/include
+        setenv PKG_CONFIG_PATH $PKG_CONFIG_PATH /opt/homebrew/opt/$pkg/lib/pkgconfig
+    end
 end
 
 setenv HOMEBREW_AUTO_UPDATE_SECS 259200
