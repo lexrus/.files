@@ -53,8 +53,12 @@ function cleanup
 end
 
 function www
-  echo 'http://0.0.0.0:8000'
-  python3 -m http.server 8000
+  set port 8000
+  if test (count $argv) -gt 0
+    set port $argv[1]
+  end
+  echo "http://0.0.0.0:$port"
+  python3 -m http.server $port
 end
 
 function pman
