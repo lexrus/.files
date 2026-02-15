@@ -1,0 +1,33 @@
+name: Integration Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  integration-test:
+    runs-on: macos-latest # Using macos-latest as macos-26 is not a standard runner label.
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link .files
+        run: |
+          ln -s $GITHUB_WORKSPACE $HOME/.files
+
+      - name: Install Homebrew
+        run: ./00_brew.sh
+
+      - name: Install Tools
+        run: ./01_tools.sh
+
+      - name: Link Configurations
+        run: ./02_link.sh
+
+      - name: Verify Fish Installation
+        run: which fish
+
+      - name: Setup Vim
+        run: fish ./03_vim.fish
