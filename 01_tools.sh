@@ -6,9 +6,7 @@ brew update
 # Install Homebrew recipes.
 function brew_install_recipes() {
   echo "Installing Homebrew recipes: ${recipes[*]}"
-  for recipe in "${recipes[@]}"; do
-    brew install $recipe
-  done
+  brew install "${recipes[@]}"
 }
 
 # Homebrew recipes
@@ -38,4 +36,3 @@ recipes=(
 )
 
 brew_install_recipes
-
