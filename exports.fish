@@ -55,11 +55,6 @@ if test -d $HOME/.swiftenv
     end
 end
 
-# Mise
-if test -e $HOME/.local/bin/mise
-    ~/.local/bin/mise activate fish | source
-end
-
 # Windsurf
 if test -e $HOME/.codeium/windsurf/bin
     fish_add_path $HOME/.codeium/windsurf/bin
