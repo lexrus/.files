@@ -70,7 +70,7 @@ function vimu
 end
 
 function dlaudio
-  youtube-dl -f bestaudio --extract-audio --audio-format mp3 $argv
+  yt-dlp -f bestaudio --extract-audio --audio-format mp3 $argv
 end
 
 function gi
