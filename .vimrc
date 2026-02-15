@@ -14,7 +14,10 @@ syntax on
 let g:rehash256 = 1
 set t_Co=256
 set background=dark
-colorscheme Molokai
+try
+  colorscheme Molokai
+catch
+endtry
 
 set backupcopy=yes                                           " see :help crontab
 set clipboard=unnamed                                        " yank and paste with the system clipboard
