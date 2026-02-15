@@ -83,7 +83,15 @@ end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-set openssl_path (brew --prefix openssl@3)
+if test -d /opt/homebrew/opt/openssl@3
+  set openssl_path /opt/homebrew/opt/openssl@3
+else if test -d /usr/local/opt/openssl@3
+  set openssl_path /usr/local/opt/openssl@3
+else if test -d /home/linuxbrew/.linuxbrew/opt/openssl@3
+  set openssl_path /home/linuxbrew/.linuxbrew/opt/openssl@3
+else
+  set openssl_path (brew --prefix openssl@3)
+end
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$openssl_path"
 
 mise activate fish --silent | source
