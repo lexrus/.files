@@ -83,16 +83,22 @@ end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-if test -d /opt/homebrew/opt/openssl@3
-  set openssl_path /opt/homebrew/opt/openssl@3
-else if test -d /usr/local/opt/openssl@3
-  set openssl_path /usr/local/opt/openssl@3
-else if test -d /home/linuxbrew/.linuxbrew/opt/openssl@3
-  set openssl_path /home/linuxbrew/.linuxbrew/opt/openssl@3
-else
-  set openssl_path (brew --prefix openssl@3)
+if not set -q _fish_openssl_path; or not test -d $_fish_openssl_path
+  if test -d /opt/homebrew/opt/openssl@3
+    set -U _fish_openssl_path /opt/homebrew/opt/openssl@3
+  else if test -d /usr/local/opt/openssl@3
+    set -U _fish_openssl_path /usr/local/opt/openssl@3
+  else if test -d /home/linuxbrew/.linuxbrew/opt/openssl@3
+    set -U _fish_openssl_path /home/linuxbrew/.linuxbrew/opt/openssl@3
+  else if type -q brew
+    set -U _fish_openssl_path (brew --prefix openssl@3)
+  end
 end
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$openssl_path"
+
+if set -q _fish_openssl_path
+  set openssl_path $_fish_openssl_path
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$openssl_path"
+end
 
 mise activate fish --silent | source
 
