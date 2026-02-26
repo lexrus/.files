@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "brew update"
-brew update
 
 # Install Homebrew recipes.
 function brew_install_recipes() {
