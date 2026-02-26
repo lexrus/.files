@@ -7,8 +7,6 @@ end
 
 set fish_greeting ""
 function fish_greeting
-  # neofetch
-  # fortune 2>/dev/null
 end
 
 function fish_prompt
