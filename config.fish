@@ -3,6 +3,9 @@ set bundler_plugin_execs pod fastlane xcpretty
 if status --is-interactive;
   source $HOME/.files/exports.fish
   source $HOME/.files/alias.fish
+  if test -e $HOME/.files/credentials.fish
+    source $HOME/.files/credentials.fish
+  end
 end
 
 set fish_greeting ""
@@ -29,7 +32,6 @@ function updateall
   vim +PlugUpdate +qall
   pip3 install --upgrade pip
   pip3 list --outdated --format=json --exclude-editable --local | python3 -c "import sys, json, subprocess; pkgs = [p['name'] for p in json.load(sys.stdin)]; subprocess.check_call(['pip3', 'install', '-U'] + pkgs) if pkgs else None"
-  gem update
   cleanup
 end
 
@@ -49,7 +51,6 @@ function cleanup
     case Linux
       apt-get clean; apt-get autoremove -y
   end
-  gem clean
 end
 
 function www
@@ -99,3 +100,6 @@ mise activate fish --silent | source
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+
+# opencode
+fish_add_path /Users/lex/.opencode/bin

@@ -21,11 +21,7 @@ setenv LANG en_US.UTF-8
 
 setenv EDITOR vim
 
-# rbenv
-command --search rbenv >/dev/null; and begin
-    . (rbenv init -|psub)
-end
-setenv RUBYOPT -W0
+export CLAUDE_CODE_NO_FLICKER=1
 
 # SDKs
 fish_add_path $HOME/SDKs/google-cloud-sdk/bin $HOME/fvm/default/bin $HOME/SDKs/arcanist/arcanist/bin $HOME/.pub-cache/bin

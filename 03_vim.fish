@@ -4,16 +4,16 @@ if not test -f ~/.vim/autoload/plug.vim
 end
 
 # Link
-rm -f /home/jules/.vimrc
-rm -f /home/jules/.vimrc.plug
-ln -s /home/jules/.files/.vimrc /home/jules/.vimrc
-ln -s /home/jules/.files/.vimrc.plug /home/jules/.vimrc.plug
-ln -s /home/jules/.files/.ctags /home/jules/.ctags
+rm -f $HOME/.vimrc
+rm -f $HOME/.vimrc.plug
+ln -s $HOME/.files/.vimrc $HOME/.vimrc
+ln -s $HOME/.files/.vimrc.plug $HOME/.vimrc.plug
+ln -s $HOME/.files/.ctags $HOME/.ctags
 
 vim +PlugInstall +qall
 
 # Inside of ~/.vim make /tmp, inside of which mkdir swap backup undo
-mkdir -p /home/jules/.vim/tmp/{swap,backup,undo}
+mkdir -p $HOME/.vim/tmp/{swap,backup,undo}
 
 mkdir -p ~/.config
 rm -rf ~/.config/nvim

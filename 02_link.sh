@@ -12,7 +12,7 @@ fi
 # Exit if, for some reason, Fish is not installed.
 [[ ! "$(type -P fish)" ]] && e_error "Fish failed to install." && return 1
 
-fish=`which fish`
+fish=$(which fish)
 if ! grep -q "$fish" "/etc/shells"; then
   echo "Add fish to /etc/shells."
   command -v fish | sudo tee -a /etc/shells
@@ -30,16 +30,12 @@ if [[ ! -L $HOME/.config/fish/config.fish ]]; then
   rm $HOME/.config/fish/config.fish
 fi
 
-if [[ ! -h $HOME/.gemrc ]]; then
-  ln -s $HOME/.files/.gemrc $HOME/.gemrc
-fi
-
 ln -s $HOME/.files/config.fish $HOME/.config/fish/config.fish
 
-if [[ ! -h $HOME/.lldbinit ]]; then
+if [[ ! -L $HOME/.lldbinit ]]; then
   ln -s $HOME/.files/.lldbinit $HOME/.lldbinit
 fi
 
-"$fish" vim.fish
+"$fish" 03_vim.fish
 
 echo "Done."

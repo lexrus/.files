@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Install Homebrew recipes.
 function brew_install_recipes() {
   echo "Installing Homebrew recipes: ${recipes[*]}"
@@ -31,6 +30,8 @@ recipes=(
   wget
   wrk
   mise
+  yazi
+  neovim
 )
 
 brew_install_recipes
