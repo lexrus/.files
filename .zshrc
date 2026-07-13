@@ -7,6 +7,7 @@ export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.claude/local:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 # SDKs
 export PATH="$HOME/SDKs/google-cloud-sdk/bin:$PATH"
@@ -86,3 +87,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
 eval "$(rbenv init - zsh)"
+
+# Added by Antigravity CLI installer
+export PATH="/Users/lex/.local/bin:$PATH"

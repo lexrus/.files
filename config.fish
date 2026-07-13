@@ -103,3 +103,21 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 # opencode
 fish_add_path /Users/lex/.opencode/bin
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Added by Antigravity
+fish_add_path /Users/lex/.antigravity/antigravity/bin
+
+# >>> grok installer >>>
+fish_add_path $HOME/.grok/bin
+# <<< grok installer <<<
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/lex/.local/bin" $PATH
+
+# Added by Antigravity IDE
+fish_add_path /Users/lex/.antigravity-ide/antigravity-ide/bin
